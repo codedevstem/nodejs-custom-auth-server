@@ -26,7 +26,8 @@ app.post('/register', (req, res) => {
         })
         .catch(error => {
             console.log(`Error creating new user ${error}`)
-            res.status(500)
+            res.status(400)
+            res.json(error)
         })
 });
 
